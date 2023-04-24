@@ -1,9 +1,11 @@
-import { Flex } from '@chakra-ui/react'
+import { Flex, Heading } from '@chakra-ui/react'
 
 export default function Home() {
 	return (
 		<Flex direction={'column'}>
-			<Flex></Flex>
+			<Flex justifyContent={'center'}>
+				<Heading>Cocktail Index</Heading>
+			</Flex>
 			<Flex></Flex>
 		</Flex>
 	)
