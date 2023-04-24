@@ -45,7 +45,9 @@ const cocktailSlice = createSlice({
 			)
 			.addCase(
 				fetchCocktails.rejected,
-				(state: CocktailState, action: PayloadAction<any>) => {}
+				(state: CocktailState, action: PayloadAction<any>) => {
+					state.loading = false
+				}
 			)
 	}
 })
