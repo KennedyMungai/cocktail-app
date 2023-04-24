@@ -2,14 +2,18 @@ import { useAppDispatch, useAppSelector } from '@/app/hooks'
 import { fetchCocktails } from '@/features/posts/postsSlice'
 import {
 	Box,
+	Button,
+	ButtonGroup,
 	Card,
 	CardBody,
-	Flex,
+	CardFooter,
+	Divider,
 	Heading,
-	Image,
 	Skeleton,
 	Stack,
-	Text
+	Image,
+	Text,
+	Flex
 } from '@chakra-ui/react'
 import { useEffect, useState } from 'react'
 
@@ -82,6 +86,12 @@ const CocktailList = () => {
 									<Text color='gray.500'>{instructions}</Text>
 								</Stack>
 							</CardBody>
+							<Divider />
+							<CardFooter>
+								<Button variant='solid' colorScheme='blue'>
+									View Cocktail
+								</Button>
+							</CardFooter>
 						</Card>
 					</Flex>
 				)
