@@ -5,3 +5,10 @@ const initialState = {
     entities: [],
     loading: false,
 }
+
+const postsSlice = createSlice({
+    name: 'posts',
+    initialState,
+    reducers: {},
+    extraReducers: {}
+)
