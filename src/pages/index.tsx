@@ -8,7 +8,7 @@ export default function Home() {
 			<Flex justifyContent={'center'} mb={'4rem'}>
 				<Header />
 			</Flex>
-			<Flex>
+			<Flex justifyContent={'center'}>
 				<SearchInput />
 			</Flex>
 		</Flex>
