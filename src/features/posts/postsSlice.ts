@@ -29,12 +29,21 @@ const cocktailSlice = createSlice({
 	initialState,
 	reducers: {},
 	extraReducers: (builder) => {
-		builder.addCase(
-			fetchCocktails.pending,
-			(state: CocktailState, action: PayloadAction<any>) => {
-				state.loading = true
-			}
-		)
+		builder
+			.addCase(
+				fetchCocktails.pending,
+				(state: CocktailState, action: PayloadAction<any>) => {
+					state.loading = true
+				}
+			)
+			.addCase(
+				fetchCocktails.fulfilled,
+				(state: CocktailState, action: PayloadAction<any>) => {}
+			)
+			.addCase(
+				fetchCocktails.rejected,
+				(state: CocktailState, action: PayloadAction<any>) => {}
+			)
 	}
 })
 
