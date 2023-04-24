@@ -5,9 +5,7 @@ import React, { useEffect, useState } from 'react'
 const CocktailList = () => {
 	const [modifiedCocktail, setModifiedCocktail] = useState<string[]>([])
 
-	const { cocktails, cocktail, loading, error } = useAppSelector(
-		(state) => state.posts
-	)
+	const { cocktails, loading } = useAppSelector((state) => state.posts)
 	const dispatch = useAppDispatch()
 
 	return <div>CocktailList</div>
