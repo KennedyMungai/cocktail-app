@@ -10,6 +10,13 @@ export const fetchCocktails = createAsyncThunk(
 	}
 )
 
+interface CocktailState {
+	cocktails: any[]
+	cocktail: any[]
+	loading: boolean
+	error: string | null
+}
+
 const cocktailSlice = createSlice({
 	name: 'cocktails',
 	initialState: {
