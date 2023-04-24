@@ -28,7 +28,5 @@ const cocktailSlice = createSlice({
 	name: 'cocktails',
 	initialState,
 	reducers: {},
-	extraReducers: {
-		[fetchCocktails.pending]: (state, action: PayloadAction<any>) => {}
-	}
+	extraReducers: {}
 })
