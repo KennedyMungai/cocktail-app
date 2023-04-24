@@ -1,1 +1,7 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+
+
+const initialState = {
+    entities: [],
+    loading: false,
+}
