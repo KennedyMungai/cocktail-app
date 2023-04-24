@@ -11,8 +11,8 @@ export const fetchCocktails = createAsyncThunk(
 )
 
 interface CocktailState {
-	cocktails: any[]
-	cocktail: any[]
+	cocktails: string[]
+	cocktail: string[]
 	loading: boolean
 	error: string | null
 }
