@@ -1,5 +1,6 @@
 import { useAppDispatch, useAppSelector } from '@/app/hooks'
 import { fetchCocktails } from '@/features/posts/postsSlice'
+import { Heading } from '@chakra-ui/react'
 import React, { useEffect, useState } from 'react'
 
 const CocktailList = () => {
@@ -12,7 +13,7 @@ const CocktailList = () => {
 		dispatch(fetchCocktails())
 	}, [])
 
-	return <div>CocktailList</div>
+	return <Heading as='h2'>CocktailList</Heading>
 }
 
 export default CocktailList
