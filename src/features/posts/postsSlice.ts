@@ -37,3 +37,5 @@ const cocktailSlice = createSlice({
 		)
 	}
 })
+
+export default cocktailSlice.reducer
