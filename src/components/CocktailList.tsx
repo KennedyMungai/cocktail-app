@@ -15,6 +15,7 @@ import {
 	Text,
 	Flex
 } from '@chakra-ui/react'
+import Link from 'next/link'
 import { useEffect, useState } from 'react'
 
 const CocktailList = () => {
@@ -89,7 +90,7 @@ const CocktailList = () => {
 							<Divider />
 							<CardFooter>
 								<Button variant='solid' colorScheme='blue'>
-									View Cocktail
+									<Link href={'#'}>View Cocktail</Link>
 								</Button>
 							</CardFooter>
 						</Card>
