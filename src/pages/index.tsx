@@ -4,8 +4,8 @@ import { Flex, Heading } from '@chakra-ui/react'
 
 export default function Home() {
 	return (
-		<Flex direction={'column'}>
-			<Flex justifyContent={'center'} mb={'4rem'}>
+		<Flex direction={'column'} gap='2rem'>
+			<Flex justifyContent={'center'}>
 				<Header />
 			</Flex>
 			<Flex justifyContent={'center'}>
