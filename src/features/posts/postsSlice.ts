@@ -47,6 +47,7 @@ const cocktailSlice = createSlice({
 				fetchCocktails.rejected,
 				(state: CocktailState, action: PayloadAction<any>) => {
 					state.loading = false
+					state.error = action.payload
 				}
 			)
 	}
