@@ -13,7 +13,13 @@ const CocktailList = () => {
 		dispatch(fetchCocktails())
 	}, [])
 
-	useEffect(() => {}, [cocktails])
+	useEffect(() => {
+		if (cocktails) {
+			const newCocktail = cocktails.map((cocktail) => {
+				const {} = cocktail
+			})
+		}
+	}, [cocktails])
 
 	return <Heading as='h2'>CocktailList</Heading>
 }
