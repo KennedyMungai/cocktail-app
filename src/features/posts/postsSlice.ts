@@ -9,3 +9,15 @@ export const fetchCocktails = createAsyncThunk(
 			.then((res) => res.data)
 	}
 )
+
+const cocktailSlice = createSlice({
+	name: 'cocktails',
+	initialState: {
+		cocktails: [],
+		cocktail: [],
+		loading: false,
+		error: null
+	},
+	reducers: {},
+	extraReducers: {}
+})
