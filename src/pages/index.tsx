@@ -7,9 +7,10 @@ export default function Home() {
 		<Flex direction={'column'}>
 			<Flex justifyContent={'center'} mb={'4rem'}>
 				<Header />
+			</Flex>
+			<Flex>
 				<SearchInput />
 			</Flex>
-			<Flex></Flex>
 		</Flex>
 	)
 }
