@@ -14,7 +14,7 @@ interface CocktailState {
 	cocktails: string[]
 	cocktail: string[]
 	loading: boolean
-	error: string | null
+	error: any | null
 }
 
 const initialState: CocktailState = {
