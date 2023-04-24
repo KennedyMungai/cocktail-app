@@ -1,6 +1,6 @@
 import { useAppDispatch, useAppSelector } from '@/app/hooks'
 import { fetchCocktails } from '@/features/posts/postsSlice'
-import { Heading } from '@chakra-ui/react'
+import { Heading, Skeleton, Stack } from '@chakra-ui/react'
 import { useEffect, useState } from 'react'
 
 const CocktailList = () => {
@@ -38,6 +38,16 @@ const CocktailList = () => {
 			setModifiedCocktail([])
 		}
 	}, [cocktails])
+
+	if (loading) {
+		return (
+			<Stack>
+				<Skeleton height='20px' />
+				<Skeleton height='20px' />
+				<Skeleton height='20px' />
+			</Stack>
+		)
+	}
 
 	return <Heading as='h2'>CocktailList</Heading>
 }
