@@ -13,6 +13,8 @@ const CocktailList = () => {
 		dispatch(fetchCocktails())
 	}, [])
 
+	useEffect(() => {}, [])
+
 	return <Heading as='h2'>CocktailList</Heading>
 }
 
