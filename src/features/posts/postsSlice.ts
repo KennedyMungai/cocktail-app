@@ -3,5 +3,9 @@ import axios from 'axios'
 
 export const fetchCocktails = createAsyncThunk(
 	'cocktails/fetchCocktails',
-	async () => {}
+	async () => {
+		return await axios
+			.get('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=')
+			.then((res) => res.data)
+	}
 )
