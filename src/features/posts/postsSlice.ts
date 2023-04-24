@@ -1,4 +1,4 @@
-import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
+import { PayloadAction, createAsyncThunk, createSlice } from '@reduxjs/toolkit'
 import axios from 'axios'
 
 export const fetchCocktails = createAsyncThunk(
@@ -19,5 +19,7 @@ const cocktailSlice = createSlice({
 		error: null
 	},
 	reducers: {},
-	extraReducers: {}
+	extraReducers: {
+		[fetchCocktails.pending]: (state, action: PayloadAction<any>) => {}
+	}
 })
