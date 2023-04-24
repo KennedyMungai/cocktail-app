@@ -8,6 +8,10 @@ const CocktailList = () => {
 	const { cocktails, loading } = useAppSelector((state) => state.posts)
 	const dispatch = useAppDispatch()
 
+	useEffect(() => {
+		return () => {}
+	}, [])
+
 	return <div>CocktailList</div>
 }
 
