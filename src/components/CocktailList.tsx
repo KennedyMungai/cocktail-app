@@ -3,17 +3,16 @@ import { fetchCocktails } from '@/features/posts/postsSlice'
 import {
 	Box,
 	Button,
-	ButtonGroup,
 	Card,
 	CardBody,
 	CardFooter,
 	Divider,
+	Flex,
 	Heading,
+	Image,
 	Skeleton,
 	Stack,
-	Image,
-	Text,
-	Flex
+	Text
 } from '@chakra-ui/react'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
