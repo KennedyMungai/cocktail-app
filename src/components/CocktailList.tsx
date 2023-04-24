@@ -34,6 +34,8 @@ const CocktailList = () => {
 			})
 
 			setModifiedCocktail(newCocktail)
+		} else {
+			setModifiedCocktail([])
 		}
 	}, [cocktails])
 
