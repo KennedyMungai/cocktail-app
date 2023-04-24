@@ -1,6 +1,6 @@
 import { useAppDispatch, useAppSelector } from '@/app/hooks'
 import { fetchCocktails } from '@/features/posts/postsSlice'
-import { Heading, Skeleton, Stack } from '@chakra-ui/react'
+import { Box, Heading, Skeleton, Stack } from '@chakra-ui/react'
 import { useEffect, useState } from 'react'
 
 const CocktailList = () => {
@@ -49,7 +49,11 @@ const CocktailList = () => {
 		)
 	}
 
-	return <Heading as='h2'>CocktailList</Heading>
+	return (
+		<Box>
+			<Heading as='h2'>CocktailList</Heading>
+		</Box>
+	)
 }
 
 export default CocktailList
