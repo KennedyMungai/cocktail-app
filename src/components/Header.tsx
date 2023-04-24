@@ -6,7 +6,9 @@ type Props = {}
 const Header = (props: Props) => {
 	return (
 		<Flex justifyContent={'center'}>
-			<Heading>Find Your Favorite Cocktails</Heading>
+			<Heading as={'h1'} size={'2xl'}>
+				Find Your Favorite Cocktails
+			</Heading>
 		</Flex>
 	)
 }
