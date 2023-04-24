@@ -11,4 +11,4 @@ const postsSlice = createSlice({
     initialState,
     reducers: {},
     extraReducers: {}
-)
+})  
