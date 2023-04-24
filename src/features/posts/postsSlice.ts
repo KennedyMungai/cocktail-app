@@ -17,14 +17,16 @@ interface CocktailState {
 	error: string | null
 }
 
+const initialState: CocktailState = {
+	cocktails: [],
+	cocktail: [],
+	loading: false,
+	error: null
+}
+
 const cocktailSlice = createSlice({
 	name: 'cocktails',
-	initialState: {
-		cocktails: [],
-		cocktail: [],
-		loading: false,
-		error: null
-	},
+	initialState,
 	reducers: {},
 	extraReducers: {
 		[fetchCocktails.pending]: (state, action: PayloadAction<any>) => {}
