@@ -4,7 +4,7 @@ import React, { FormEvent, useRef } from 'react'
 const SearchInput = () => {
 	const searchRef = useRef<HTMLInputElement>(null)
 
-	const submitHandler = (e: FormEvent<HTMLFormElement>) => {
+	const submitHandler = (e: FormEvent<HTMLInputElement>) => {
 		e.preventDefault()
 	}
 
