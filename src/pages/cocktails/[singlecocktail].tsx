@@ -1,3 +1,5 @@
+import { useEffect, useState } from 'react'
+
 type Props = {}
 
 const SingleCocktail = (props: Props) => {
