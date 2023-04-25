@@ -6,6 +6,12 @@ import { useEffect, useState } from 'react'
 const SingleCocktail = () => {
 	const router = useRouter()
 
+	const { cocktail, loading } = useAppSelector((state) => state.posts)
+
+	const dispatch = useAppDispatch()
+
+	useEffect(() => {})
+
 	const { singlecocktail } = router.query
 
 	return <div>SingleCocktail</div>
