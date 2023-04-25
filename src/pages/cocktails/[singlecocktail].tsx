@@ -99,7 +99,7 @@ const SingleCocktail = () => {
 						</Stack>
 					) : (
 						<Stack spacing={'4rem'}>
-							<Flex direction='column' my='1rem' key={id}>
+							<Flex direction='column' my='1rem'>
 								<Card maxW='sm'>
 									<CardBody>
 										<Image
