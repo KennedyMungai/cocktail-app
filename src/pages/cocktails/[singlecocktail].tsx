@@ -4,6 +4,7 @@ import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
 
 const SingleCocktail = () => {
+	const { singlecocktail } = router.query
 	const router = useRouter()
 
 	const { cocktail, loading } = useAppSelector((state) => state.posts)
@@ -11,8 +12,6 @@ const SingleCocktail = () => {
 	const dispatch = useAppDispatch()
 
 	useEffect(() => {})
-
-	const { singlecocktail } = router.query
 
 	return <div>SingleCocktail</div>
 }
