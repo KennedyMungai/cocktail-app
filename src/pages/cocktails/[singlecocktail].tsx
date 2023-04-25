@@ -32,7 +32,7 @@ const SingleCocktail = () => {
 	}, [singlecocktail])
 
 	useEffect(() => {
-		if (cocktail.length > 0) {
+		if (!cocktail) {
 			const {
 				strDrink: name,
 				strDrinkThumb: image,
@@ -45,7 +45,7 @@ const SingleCocktail = () => {
 				strIngredient3,
 				strIngredient4,
 				strIngredient5
-			} = cocktail[0]
+			} = cocktail
 
 			const ingredients = [
 				strIngredient1,
