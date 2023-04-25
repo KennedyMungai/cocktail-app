@@ -33,7 +33,7 @@ const SearchInput = () => {
 					onClick={submitHandler}
 				/>
 			</InputGroup>
-			<FormHelperText>Your cocktail search query</FormHelperText>
+			<FormHelperText>What's your poison?</FormHelperText>
 		</FormControl>
 	)
 }
