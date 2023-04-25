@@ -5,7 +5,12 @@ const SearchInput = () => {
 	const searchRef = useRef<HTMLInputElement>(null)
 
 	return (
-		<Input placeholder='Search Cocktails' width='30rem' ref={searchRef} />
+		<Input
+			placeholder='Search Cocktails'
+			width='30rem'
+			ref={searchRef}
+			onSubmit={submitHandler}
+		/>
 	)
 }
 
