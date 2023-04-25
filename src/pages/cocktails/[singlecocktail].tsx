@@ -52,6 +52,8 @@ const SingleCocktail = () => {
 			}
 
 			setmodifiedCocktail(newCocktail)
+		} else {
+			setmodifiedCocktail([])
 		}
 	}, [singlecocktail, cocktail])
 
