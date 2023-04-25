@@ -4,7 +4,7 @@ import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
 
 const SingleCocktail = () => {
-	const [modifiedCocktail, setmodifiedCocktail] = useState<string[]>([])
+	const [modifiedCocktail, setmodifiedCocktail] = useState([])
 
 	const router = useRouter()
 	const { singlecocktail } = router.query
