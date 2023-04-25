@@ -21,6 +21,17 @@ export const fetchSingleCocktail = createAsyncThunk(
 	}
 )
 
+export const fetchSearchCocktail = createAsyncThunk(
+	'cocktails/fetchSearchCocktail',
+	async ({ search }: { search: string }) => {
+		return await axios
+			.get(
+				`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${search}`
+			)
+			.then((res) => res.data)
+	}
+)
+
 interface CocktailState {
 	cocktails: string[]
 	cocktail: string[]
