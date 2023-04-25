@@ -17,6 +17,8 @@ const SingleCocktail = () => {
 		)
 	}, [singlecocktail])
 
+	useEffect(() => {}, [])
+
 	return <div>SingleCocktail</div>
 }
 
