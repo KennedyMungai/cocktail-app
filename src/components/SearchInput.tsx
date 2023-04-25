@@ -16,13 +16,22 @@ const SearchInput = () => {
 
 	const submitHandler = (e: FormEvent<HTMLInputElement>) => {
 		e.preventDefault()
+
+		const searchText = searchRef.current.value
+
+		console.log('Submitted')
 	}
 
 	return (
-		<FormControl width='40rem' onSubmit={submitHandler}>
+		<FormControl width='40rem'>
 			<InputGroup>
 				<Input type='text' placeholder='Search...' ref={searchRef} />
-				<InputRightAddon children='Search' as={Button} type='submit' />
+				<InputRightAddon
+					children='Search'
+					as={Button}
+					type='submit'
+					onClick={submitHandler}
+				/>
 			</InputGroup>
 			<FormHelperText>Your cocktail search query</FormHelperText>
 		</FormControl>
