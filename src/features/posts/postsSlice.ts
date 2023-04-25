@@ -92,8 +92,12 @@ const cocktailSlice = createSlice({
 						state.loading = false
 						state.error = action.payload
 					}
-				)
-	}
+				),
+				builder
+				.addCase(fetchSearchCocktail.pending, (state: CocktailState) => {})
+				.addCase(fetchSearchCocktail.fulfilled, (state: CocktailState, action: PayloadAction<any>) => {})
+				.addCase(fetchSearchCocktail.rejected, (state: CocktailState, action: PayloadAction<any>) => {})
+	
 })
 
 export default cocktailSlice.reducer
