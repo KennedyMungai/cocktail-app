@@ -1,5 +1,6 @@
 import { useAppDispatch, useAppSelector } from '@/app/hooks'
 import { fetchSingleCocktail } from '@/features/posts/postsSlice'
+import { Flex, Text } from '@chakra-ui/react'
 import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
 
@@ -57,7 +58,25 @@ const SingleCocktail = () => {
 		}
 	}, [singlecocktail, cocktail])
 
-	return <div>SingleCocktail</div>
+	if (!modifiedCocktail) {
+		return (
+			<Flex justify={'center'} color={'red.300'}>
+				<Text>No Cocktails to be displayed</Text>
+			</Flex>
+		)
+	} else {
+		const {
+			name,
+			image,
+			category,
+			info,
+			glass,
+			instructions,
+			ingredients
+		} = modifiedCocktail
+
+		return <div>SingleCocktail</div>
+	}
 }
 
 export default SingleCocktail
