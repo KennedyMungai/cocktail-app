@@ -12,7 +12,9 @@ const SingleCocktail = () => {
 	const dispatch = useAppDispatch()
 
 	useEffect(() => {
-		fetchSingleCocktail(`${singlecocktail}`)
+		dispatch(
+			fetchSingleCocktail({ singlecocktail: singlecocktail as string })
+		)
 	}, [singlecocktail])
 
 	return <div>SingleCocktail</div>
