@@ -89,7 +89,9 @@ const CocktailList = () => {
 							<Divider />
 							<CardFooter>
 								<Button variant='solid' colorScheme='blue'>
-									<Link href={'#'}>View Cocktail</Link>
+									<Link href={`cocktails/${id}`}>
+										View Cocktail
+									</Link>
 								</Button>
 							</CardFooter>
 						</Card>
