@@ -50,6 +50,8 @@ const SingleCocktail = () => {
 				instructions,
 				ingredients
 			}
+
+			setmodifiedCocktail(newCocktail)
 		}
 	}, [singlecocktail, cocktail])
 
