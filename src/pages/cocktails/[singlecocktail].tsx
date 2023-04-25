@@ -1,3 +1,4 @@
+import { fetchSingleCocktail } from '@/features/posts/postsSlice'
 import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
 
