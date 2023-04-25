@@ -6,6 +6,8 @@ type Props = {}
 const SingleCocktail = (props: Props) => {
 	const router = useRouter()
 
+	const { singlecocktail } = router.query
+
 	return <div>SingleCocktail</div>
 }
 
