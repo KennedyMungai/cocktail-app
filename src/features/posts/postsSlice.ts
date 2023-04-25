@@ -96,15 +96,23 @@ const cocktailSlice = createSlice({
 			builder
 				.addCase(
 					fetchSearchCocktail.pending,
-					(state: CocktailState) => {}
+					(state: CocktailState) => {
+						state.loading = true
+					}
 				)
 				.addCase(
 					fetchSearchCocktail.fulfilled,
-					(state: CocktailState, action: PayloadAction<any>) => {}
+					(state: CocktailState, action: PayloadAction<any>) => {
+						state.loading = false
+						state.cocktails = action.payload.drinks
+					}
 				)
 				.addCase(
 					fetchSearchCocktail.rejected,
-					(state: CocktailState, action: PayloadAction<any>) => {}
+					(state: CocktailState, action: PayloadAction<any>) => {
+						state.loading = false
+						state.error = action.payload
+					}
 				)
 	}
 })
