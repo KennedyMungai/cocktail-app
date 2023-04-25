@@ -1,6 +1,19 @@
 import { useAppDispatch, useAppSelector } from '@/app/hooks'
 import { fetchSingleCocktail } from '@/features/posts/postsSlice'
-import { Flex, Text } from '@chakra-ui/react'
+import {
+	Button,
+	Card,
+	CardBody,
+	CardFooter,
+	Divider,
+	Flex,
+	Heading,
+	Skeleton,
+	Stack,
+	Text,
+	Image
+} from '@chakra-ui/react'
+import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
 
@@ -75,7 +88,43 @@ const SingleCocktail = () => {
 			ingredients
 		} = modifiedCocktail
 
-		return <div>SingleCocktail</div>
+		return (
+			<Flex justify={'center'}>
+				<Flex>
+					{loading ? (
+						<Stack>
+							<Skeleton height='20px' />
+							<Skeleton height='20px' />
+							<Skeleton height='20px' />
+						</Stack>
+					) : (
+						<Stack spacing={'4rem'}>
+							<Flex direction='column' my='1rem' key={id}>
+								<Card maxW='sm'>
+									<CardBody>
+										<Image
+											src={image}
+											alt={name}
+											borderRadius='lg'
+										/>
+										<Stack mt='6' spacing='3'>
+											<Heading size='lg'>{name}</Heading>
+											<Text>{info}</Text>
+											<Text color='gray.500'>
+												{instructions}
+											</Text>
+										</Stack>
+									</CardBody>
+								</Card>
+							</Flex>
+							<Button variant={'ghost'}>
+								<Link href={'/'}>Go Back</Link>
+							</Button>
+						</Stack>
+					)}
+				</Flex>
+			</Flex>
+		)
 	}
 }
 
